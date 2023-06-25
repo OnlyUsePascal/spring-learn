@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:coachEnv.properties"/>
     <!-- bean definitions here -->
-    <bean id="myCoach" class="org.example.IOC.XML.CoachFootball">
+    <bean id="myService"
+          class="org.example.IOC.XML.CoachServiceFun">
+    </bean>
+
+    <bean id="myCoach"
+          class="org.example.IOC.XML.CoachFootball">
+        <!-- using constructor -->
+        <constructor-arg ref="myService"/>
+    </bean>
+
+    <bean id="myCoach2"
+          class="org.example.IOC.XML.CoachFootball">
+        <!-- using constructor -->
+        <constructor-arg ref="myService"/>
+
+        <!-- using setter -->
+        <property name="coachService" ref="myService"/>
+
+        <!-- setter for literal value -->
+        <property name="name" value="${coach.name}"/>
+        <property name="age" value="${coach.age}"/>
     </bean>
 </beans>

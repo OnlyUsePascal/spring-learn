@@ -9,7 +9,12 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 
         // get coach by custom bean
-        Coach myCoach1 = context.getBean(CoachTennis.class);
-        System.out.println(myCoach1.getDailyTask());
+        CoachTennis myCoach = context.getBean(CoachTennis.class);
+        //System.out.println(myCoach);
+        System.out.println(myCoach.getService());
+        System.out.println(myCoach.name);
+
+
+
     }
 }
