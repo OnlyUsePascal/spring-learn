@@ -11,13 +11,11 @@ public class Main {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:IOC_XML.xml");
 
         // retrieve bean
-        Coach myCoach;
-        myCoach = context.getBean("myCoach2", Coach.class);
+        Coach coach1 = context.getBean("myCoach2", Coach.class);
+        System.out.println(coach1);
 
-        // get methods
-        System.out.println(myCoach);
-        System.out.println(myCoach.getDailyTask());
-        System.out.println(myCoach.getService());
+        Coach coach2 = context.getBean("myCoach2", Coach.class);
+        System.out.println(coach2);
 
         // close context
         context.close();

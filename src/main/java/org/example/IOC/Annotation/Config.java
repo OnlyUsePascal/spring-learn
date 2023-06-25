@@ -30,7 +30,8 @@ public class Config {
     //    return new CoachTennis(coachService);
     //}
 
-    @Bean
+    @Bean(initMethod = "initMethod", destroyMethod = "destroyMethod")
+    // @Scope("prototype")
     public CoachTennis getCoachTennis(){
         return new CoachTennis();
     }
@@ -51,4 +52,6 @@ public class Config {
         coachTennis.setCoachService(coachService);
     }
 
+
 }
+

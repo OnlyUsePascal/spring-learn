@@ -10,12 +10,13 @@ public class CoachTennis implements Coach{
     public String name;
 
     public CoachTennis(){
-        System.out.println("what1");
+        // System.out.println("what1");
     }
 
     public CoachTennis(CoachService coachService){
-        System.out.println("what2");
+        // System.out.println("what2");
         this.coachService = coachService;
+
     }
 
     public String getService(){
@@ -24,7 +25,7 @@ public class CoachTennis implements Coach{
 
     @Override
     public String getDailyTask() {
-        return "leggo tennis";
+        return " leggo tennis";
     }
 
     public void setName(String name){
@@ -33,5 +34,13 @@ public class CoachTennis implements Coach{
 
     public void setCoachService(CoachService coachService){
         this.coachService = coachService;
+    }
+
+    public void initMethod() {
+        System.out.println("init method");
+    }
+
+    public void destroyMethod() {
+        System.out.println("destroy");
     }
 }
