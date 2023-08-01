@@ -6,11 +6,10 @@
 
 <body>
 <main role="main" class="container">
-  <div class="starter-template">
-    <h1>Hello world, [${name}]</h1>
+  <div class="">
+    <p>Student name: [${student.firstName}] </p>
+    <p>Age: [${student.age}]</p>
   </div>
-  <a href="/testForm/">Click here to get form</a>
-
 </main>
 </body>
 </html>

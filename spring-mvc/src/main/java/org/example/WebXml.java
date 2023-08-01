@@ -1,11 +1,10 @@
-// you can comment this whole thing and use xml
+package org.example;
 
-// package org.example;
-//
-// import org.springframework.lang.NonNull;
-// import org.springframework.lang.Nullable;
-// import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-//
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+// you can comment this whole thing and use xml
 // public class WebXml extends AbstractAnnotationConfigDispatcherServletInitializer {
 //   @Override
 //   protected Class<?>[] getServletConfigClasses() {

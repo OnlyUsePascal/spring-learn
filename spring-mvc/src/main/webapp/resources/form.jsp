@@ -5,8 +5,8 @@
   <title>Title</title>
 </head>
 <body>
-  <form action="home" method="GET">
-    <input type="text" placeholder="your name here" name="name">
+  <form action="result" method="GET">
+    <input type="text" placeholder="your name here" name="inputName">
     <button type="submit">Submit</button>
   </form>
 </body>
