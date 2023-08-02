@@ -1,12 +1,20 @@
 package org.example;
 
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class ModelStudent {
 
-  public String firstName;
-  public int age;
+  @NotNull(message = "should not null bro")
+  @Size(min = 2, message = "should be longer than 2 char bro")
+  private String firstName;
+
+  @Min(value = 5, message = "should be older bro")
+  private int age;
 
   public ModelStudent(){
-
   }
 
   public void setFirstName(String firstName) {

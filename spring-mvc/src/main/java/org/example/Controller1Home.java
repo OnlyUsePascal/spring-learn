@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class ControllerHome {
+public class Controller1Home {
   @RequestMapping("/")
   public String toHome(ModelMap modelMap){
     modelMap.addAttribute("name", "Joun");

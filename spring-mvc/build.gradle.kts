@@ -25,7 +25,12 @@ dependencies {
     
     // hibernate validator
     implementation("org.hibernate:hibernate-validator:8.0.0.Final")
-    implementation("javax.validation:validation-api:2.0.1.Final") // support api
+    implementation("org.hibernate.validator:hibernate-validator-annotation-processor:8.0.0.Final")
+    implementation("org.hibernate.validator:hibernate-validator-cdi:8.0.0.Final")
+    implementation("org.glassfish.expressly:expressly:5.0.0")
+    implementation("com.fasterxml:classmate:1.5.1")
+    
+    
 }
 
 gretty{

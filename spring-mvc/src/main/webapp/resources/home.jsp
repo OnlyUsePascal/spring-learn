@@ -9,7 +9,9 @@
   <div class="starter-template">
     <h1>Hello world, [${name}]</h1>
   </div>
-  <a href="/testForm/">Click here to get form</a>
+  <a href="/testForm/">Click here to get Form</a> <br>
+  <a href="/testModel/">Click here to get Model</a> <br>
+  
 
 </main>
 </body>

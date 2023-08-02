@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/testForm")
-public class ControllerForm {
+public class Controller2Form {
   @RequestMapping("/")
-  public String toForm(){
+  public String toForm() {
     return "form";
   }
 
   @RequestMapping("/result")
-  public String toResult(ModelMap modelMap, @RequestParam("inputName") String inputName){
+  public String toResult(ModelMap modelMap, @RequestParam("inputName") String inputName) {
     System.out.println(inputName);
     return "formResult";
   }

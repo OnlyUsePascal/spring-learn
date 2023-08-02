@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Spring Web MVC and JSP</title>
+  
 </head>
 
 <body>
