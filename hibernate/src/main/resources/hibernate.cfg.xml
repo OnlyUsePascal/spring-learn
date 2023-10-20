@@ -22,5 +22,10 @@
     <!-- Set the current session context -->
     <property name="current_session_context_class">thread</property>
 
+    <mapping class="org.example.ModelUser"/>
+    <mapping class="org.example.OneToOne.InstructorDetail" />
+    <mapping class="org.example.OneToOne.Instructor" />
+
+
   </session-factory>
 </hibernate-configuration>

@@ -24,11 +24,15 @@ dependencies {
 
     // hibernate
     implementation("org.hibernate.orm:hibernate-core:6.3.0.Final")
-
     // mysql / mariadb
-    // implementation("mysql:mysql-connector-java:8.0.27")
     implementation("org.mariadb.jdbc:mariadb-java-client:3.1.4")
-
+    
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    implementation("org.apache.logging.log4j:log4j-core:2.20.0")
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:2.20.0")
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+    implementation("org.apache.logging.log4j:log4j-api:2.20.0")
 }
 
 tasks.test {
