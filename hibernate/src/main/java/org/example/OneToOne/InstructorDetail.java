@@ -11,6 +11,8 @@ public class InstructorDetail {
   private int id;
   @Column(name = "otherName")
   private String otherName;
+  @OneToOne(mappedBy = "instructorDetail")
+  private Instructor instructor;
 
   public InstructorDetail() {
   }
@@ -33,6 +35,14 @@ public class InstructorDetail {
 
   public void setOtherName(String otherName) {
     this.otherName = otherName;
+  }
+
+  public Instructor getInstructor() {
+    return instructor;
+  }
+
+  public void setInstructor(Instructor instructor) {
+    this.instructor = instructor;
   }
 
   @Override

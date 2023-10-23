@@ -13,7 +13,7 @@ public class Instructor {
   private String mainName;
   @OneToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "detail_id")
-  InstructorDetail instructorDetail;
+  private InstructorDetail instructorDetail;
 
   public Instructor() {
   }
@@ -45,6 +45,7 @@ public class Instructor {
   public void setInstructorDetail(InstructorDetail instructorDetail) {
     this.instructorDetail = instructorDetail;
   }
+
 
 
   @Override

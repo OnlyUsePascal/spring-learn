@@ -33,6 +33,10 @@ dependencies {
     implementation("org.apache.logging.log4j:log4j-slf4j-impl:2.20.0")
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
     implementation("org.apache.logging.log4j:log4j-api:2.20.0")
+    
+    // class scanner
+    implementation("org.reflections:reflections:0.10.2")
+    
 }
 
 tasks.test {
