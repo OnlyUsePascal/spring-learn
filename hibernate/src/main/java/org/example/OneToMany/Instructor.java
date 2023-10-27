@@ -18,10 +18,11 @@ public class Instructor {
   @JoinColumn(name = "detail_id")
   private InstructorDetail instructorDetail;
   @OneToMany(cascade = {CascadeType.DETACH,
-    CascadeType.MERGE,
-    CascadeType.PERSIST,
-    CascadeType.REFRESH},
-    mappedBy = "instructor")
+          CascadeType.MERGE,
+          CascadeType.PERSIST,
+          CascadeType.REFRESH},
+          mappedBy = "instructor",
+          fetch = FetchType.EAGER)
   private List<Course> courses;
 
   public Instructor() {

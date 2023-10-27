@@ -18,11 +18,11 @@ public class Course {
   @JoinColumn(name = "instructor_id")
   private Instructor instructor;
 
-  public Course(){
-
+  public Course() {
+    System.out.println("* course created");
   }
 
-  public Course(String title){
+  public Course(String title) {
     this.title = title;
   }
 
