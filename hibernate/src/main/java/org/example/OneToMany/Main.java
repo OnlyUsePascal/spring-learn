@@ -30,29 +30,41 @@ public class Main {
             .configure(configFileName)
             .buildSessionFactory();
 
-    // Instructor instructor;
-    List<Course> courses = new ArrayList<>();
+    // Instructor instructor = new Instructor("joun1");
+    // List<Course> courses = new ArrayList<>();
     // Course c1 = new Course("c1");
     // Course c2 = new Course("c2");
-
+    //
     // instructor.addCourse(c1);
     // instructor.addCourse(c2);
+    
+    Comment cm1 = new Comment("what the fuck");
+    Comment cm2 = new Comment("sure thing");
 
     try {
       session = sessionFactory.getCurrentSession();
       session.beginTransaction();
 
+      // String cmd = "from Course where id = 1";
+      // SelectionQuery<Course> query = session.createQuery(cmd, Course.class);
+      // Course c = query.getSingleResult();
+
+      Course c = session.get(Course.class, 2);
+      Comment cm = c.commentList.get(0);
+      session.remove(cm);
+      
+      // session.persist(instructor);
       // instructor = session.get(Instructor.class, 7);
       // System.out.println(instructor);
       // for (Course course : instructor.getCourses()) System.out.println(course);
 
-      String cmd = "from Instructor i join i.courses where i.id >= 7";
-      SelectionQuery<Instructor> query  = session.createSelectionQuery(cmd, Instructor.class);
-      // query.setParameter("instructorId", 7);
-      for (Instructor instructor : query.getResultList()) {
-        System.out.println(instructor);
-        for (Course course : instructor.getCourses()) System.out.println(course);
-      };
+      // String cmd = "from Instructor i join i.courses where i.id >= 7";
+      // SelectionQuery<Instructor> query  = session.createSelectionQuery(cmd, Instructor.class);
+      // // query.setParameter("instructorId", 7);
+      // for (Instructor instructor : query.getResultList()) {
+      //   System.out.println(instructor);
+      //   for (Course course : instructor.getCourses()) System.out.println(course);
+      // };
 
 
 

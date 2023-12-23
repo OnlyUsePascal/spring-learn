@@ -12,10 +12,11 @@ public class Instructor {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
   private int id;
-  @Column(name = "mainName")
-  private String mainName;
+  @Column(name = "name")
+  private String name;
   @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "detail_id")
+  @GeneratedValue
+  @JoinColumn(name = "detailId")
   private InstructorDetail instructorDetail;
   @OneToMany(cascade = {CascadeType.DETACH,
           CascadeType.MERGE,
@@ -28,8 +29,8 @@ public class Instructor {
   public Instructor() {
   }
 
-  public Instructor(String mainName) {
-    this.mainName = mainName;
+  public Instructor(String name) {
+    this.name = name;
   }
 
   public InstructorDetail getInstructorDetail() {
@@ -44,12 +45,12 @@ public class Instructor {
     this.id = id;
   }
 
-  public String getMainName() {
-    return mainName;
+  public String getName() {
+    return name;
   }
 
-  public void setMainName(String mainName) {
-    this.mainName = mainName;
+  public void setName(String name) {
+    this.name = name;
   }
 
   public void setInstructorDetail(InstructorDetail instructorDetail) {
@@ -73,7 +74,7 @@ public class Instructor {
   public String toString() {
     return "Instructor{" +
             "id=" + id +
-            ", mainName='" + mainName + '\'' +
+            ", mainName='" + name + '\'' +
             '}';
   }
 }
