@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+  <!-- <context:component-scan base-package="example"/> -->
+  <!-- <tx:annotation-driven transaction-manager="myTransactionManager"/> -->
+  <!-- <mvc:annotation-driven/> -->
+
+  <!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
+  <!--   <property name="prefix" value="/public/"/> -->
+  <!--   <property name="suffix" value=".jsp"/> -->
+  <!-- </bean> -->
+
+  <!-- &lt;!&ndash; Step 1: Define Database DataSource / connection pool &ndash;&gt; -->
+  <!-- <bean id="myDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+  <!--   <property name="driverClassName" value="org.mariadb.jdbc.Driver"/> -->
+  <!--   <property name="url" value="jdbc:mariadb://localhost:3306/spring_t1"/> -->
+  <!--   <property name="username" value="spring"/> -->
+  <!--   <property name="password" value="123"/> -->
+  <!-- </bean> -->
+
+  <!-- &lt;!&ndash; Step 2: Setup Hibernate session factory &ndash;&gt; -->
+  <!-- <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"> -->
+  <!--   <property name="dataSource" ref="myDataSource"/> -->
+  <!--   <property name="packagesToScan" value="example.Model"/> -->
+  <!--   <property name="hibernateProperties"> -->
+  <!--     <props> -->
+  <!--       <prop key="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</prop> -->
+  <!--       <prop key="hibernate.show_sql">true</prop> -->
+  <!--     </props> -->
+  <!--   </property> -->
+  <!-- </bean> -->
+
+  <!-- &lt;!&ndash; Step 3: Setup Hibernate transaction manager &ndash;&gt; -->
+  <!-- <bean id="myTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager"> -->
+  <!--   <property name="sessionFactory" ref="sessionFactory"/> -->
+  <!-- </bean> -->
+
+  <!-- Step 4: Enable configuration of transactional behavior based on annotations -->
+  <!-- Add support for reading web resources: css, images, js, etc ... -->
+  <!-- <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources> -->
+</beans>
+
